@@ -1,26 +1,29 @@
+import { UserModule } from './user/user.module';
+import { ProductService } from './product.service';
+import { AuthenticationModule } from './authentication/authentication.module';
+import { HeaderModule } from './header/header.module';
+// import { AdminModule } from './admin/admin.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin.component';
-import { AuthenticationComponent } from './authentication/authentication.component';
 import { BackgroundCoverComponent } from './background-cover/background-cover.component';
-import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
-    AuthenticationComponent,
-    BackgroundCoverComponent,
-    HeaderComponent
+    BackgroundCoverComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // AdminModule,
+    HeaderModule,
+    AuthenticationModule,
+    UserModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
