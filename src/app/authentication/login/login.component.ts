@@ -38,9 +38,7 @@ export class LoginComponent implements OnInit {
         }
        else if(localStorage.getItem("email")==obj.email && localStorage.getItem("password")==obj.password)
       {
-        sessionStorage.setItem("login","true");
-        // alert(document.getElementById(this.loginid).innerHTML);
-        // document.getElementById(this.loginid).innerHTML = "Logout";
+        sessionStorage.setItem("login",obj.email);
         this.router.navigate(['./User/home']);
         
       }

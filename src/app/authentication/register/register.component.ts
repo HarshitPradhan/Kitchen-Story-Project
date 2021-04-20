@@ -23,7 +23,6 @@ export class RegisterComponent implements OnInit {
     this.formControls = this.registerForm.controls;
   }
   handleFormSubmmit(event){
-    // tslint:disable-next-line: no-unused-expression
     this.formSubmitted = true;
     if ( this.registerForm.invalid ){
       return;

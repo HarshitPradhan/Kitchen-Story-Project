@@ -1,8 +1,9 @@
+
 import { UserModule } from './user/user.module';
 import { ProductService } from './product.service';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { HeaderModule } from './header/header.module';
-// import { AdminModule } from './admin/admin.module';
+ import { AdminModule } from './admin/admin.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +19,7 @@ import { BackgroundCoverComponent } from './background-cover/background-cover.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // AdminModule,
+    AdminModule,
     HeaderModule,
     AuthenticationModule,
     UserModule

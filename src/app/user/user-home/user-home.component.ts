@@ -10,18 +10,18 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   styleUrls: ['./user-home.component.css']
 })
 export class UserHomeComponent implements OnInit,AfterViewInit {
+
+
   get_all_product_items = [];
   constructor(private productService: ProductService, private router: Router) { }
   ngAfterViewInit(): void {
-    // let i = sessionStorage.getItem("btnsession");
-    // console.log(i);
-    // if(i!=null)
-    // {
-    //   document.getElementById(i).
-    // }
+    
   }
+  userDisplayName = '';
 
   ngOnInit(): void {
+    this.userDisplayName = sessionStorage.getItem('login');
+
     this.getAllItems();
     this.checksession();
     
@@ -39,10 +39,7 @@ checksession()
 {
     let i = sessionStorage.getItem("btnsession");
     console.log(i);
-    // if(i!=null)
-    // {
-    //   alert(document.getElementById(i).innerHTML);
-    // }
+    
 }
 buy(productname,imglink,productprice){
   console.log(productname,imglink,productprice);
